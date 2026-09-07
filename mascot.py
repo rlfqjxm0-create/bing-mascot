@@ -38633,21 +38633,24 @@ class Mascot:
         x = max(0, (sw - W) // 2)
         y = max(0, (sh - H) // 2)
         win.geometry("%dx%d+%d+%d" % (W, H, x, y))
-        # geometry 의 y 는 제목 표시줄 위가 아니라 안쪽 기준이라, 그대로 두면
-        # 제목 표시줄 높이만큼 아래로 치우친다. 실제로 놓인 자리를 재서 보정한다.
-        win.update_idletasks()
-        try:
-            win.geometry("+%d+%d" % (x + (x - win.winfo_rootx()),
-                                     y + (y - win.winfo_rooty())))
-        except Exception:
-            pass
+        # 표시줄은 창을 화면에 올리기 **전에** 뗀다. 올린 뒤에 떼면 Tk 가 OS
+        # 창을 부수고 다시 만들어 홈이 한 번 꺼졌다 켜진다 (제보 — 뽀모도로·
+        # 쪽지함은 순서가 맞아 안 그랬다). 하늘 띠가 잡아 옮기는 띠다.
+        self._chrome_setup(win, None,
+                           band=lambda: getattr(self, "_room_top_px", 90),
+                           on_close=self._room_close)
+        if not getattr(win, "_chrome", None):
+            # OS 표시줄이 있는 창(맥) — geometry 의 y 는 제목 표시줄 위가 아니라
+            # 안쪽 기준이라 표시줄 높이만큼 아래로 치우친다. 재서 보정한다.
+            win.update_idletasks()
+            try:
+                win.geometry("+%d+%d" % (x + (x - win.winfo_rootx()),
+                                         y + (y - win.winfo_rooty())))
+            except Exception:
+                pass
         cv = tk.Canvas(win, width=W, height=H, highlightthickness=0,
                        bd=0, bg=self._room_palette()["wall"])
         cv.pack(fill="both", expand=True)
-        # 유리 테마 — 표시줄 없이 (요청). 하늘 띠가 잡아 옮기는 띠다.
-        self._chrome_setup(win, cv,
-                           band=lambda: getattr(self, "_room_top_px", 90),
-                           on_close=self._room_close)
         cv.bind("<Button-1>", lambda e: self._safe("room_click",
                                                    self._room_click, e))
         cv.bind("<Button-3>", lambda e: self._safe("room_rclick",
