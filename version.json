@@ -1,7 +1,7 @@
 {
- "version": 1788883271,
+ "version": 1788884408,
  "files": {
-  "mascot.py": "527fd5fecf53c0f30a9a045892bdd68dc587f2be775f971eb6ffe191409d23f8",
+  "mascot.py": "6fda63a002a0689e32096a4e0bacb0c31daa5babd7869941a1d91adb6ad79707",
   "parts_bing/arm_key.png": "8a8d07f3c4e7a883e851cb0f33b89b29402c5b38fb86eee2ed9cf08e1af96983",
   "parts_bing/arm_pen.png": "8ddac3a00cb6d662cb2235cd8ace9f4f624554b65dfb95eb6ef82bc5de8e2b1e",
   "parts_bing/arm_right.png": "55b45a479816eb1045bfc04590c7f32f6945a85619e3b86226d6f5e16f879080",
