@@ -1,7 +1,7 @@
 {
- "version": 1789064764,
+ "version": 1789076080,
  "files": {
-  "mascot.py": "90cdc51b6f808413ff35ee014599ba2ee5acd1a45b0bcd7fa852478b07bc5a4f",
+  "mascot.py": "94d28c41845a7aaf4d97c65ce453108a1644eab5db57c1c2db540063163621c2",
   "parts_bing/arm_key.png": "8a8d07f3c4e7a883e851cb0f33b89b29402c5b38fb86eee2ed9cf08e1af96983",
   "parts_bing/arm_pen.png": "8ddac3a00cb6d662cb2235cd8ace9f4f624554b65dfb95eb6ef82bc5de8e2b1e",
   "parts_bing/arm_right.png": "55b45a479816eb1045bfc04590c7f32f6945a85619e3b86226d6f5e16f879080",
@@ -567,6 +567,12 @@
   "stickers/__init__.py": "d77e3dc92cb353dced8d192c140643c6458bc3901facdf2e0a0d0830fa4244b7",
   "youtube_player.py": "41c1ed27c7ffe17a489621285955c7ff33ad5ee5dae18b68b8e0caef678058e5"
  },
- "notes": [],
- "silent": true
+ "notes": [
+  "스톱워치가 생겼어요 — 우클릭 › 뽀모도로 타이머 창 왼쪽 위 탭(토마토 | 스톱워치)으로 바꿔요. 시작·멈춤·구간 기록·처음으로",
+  "탭을 바꾸거나 창을 닫아도 뽀모도로·스톱워치 둘 다 계속 돌아요 — 안 보이는 쪽이 돌고 있으면 탭에 초록 점",
+  "스톱워치를 켜 두면 캐릭터 카드 위에 아이콘이 서요 — 뽀모도로를 안 돌릴 땐 카드 시간이 스톱워치, 아이콘을 누르면 스톱워치 창 (창 오른쪽 위 '카드에 표시'로 끌 수 있어요)",
+  "뽀모도로 창의 꽃 단추(스티커·시간·소리)는 맨 위 왼쪽 메뉴 단추로 옮겼어요",
+  "뽀모도로 '오늘' 집중 아이콘을 정중앙에 · 이번 주 같이한 친구가 한 줄에 넷 · 토마토 개수 알약 정렬",
+  "캐릭터 카드의 '집중·딴짓 중' 글자가 크고 굵어졌어요"
+ ]
 }
