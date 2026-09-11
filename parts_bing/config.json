@@ -555,6 +555,7 @@
   },
   "chips": true,
   "prop_over_arms": true,
+  "deadline": true,
   "feature_hints": true,
   "feature_hints_reset": 1,
   "prop_extra": {},
